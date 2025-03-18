@@ -13,17 +13,18 @@
   </head>
   <body>
     <!-- Responsive NavBar -->
-    <nav
+        <nav
       class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10"
     >
       <h1 class="text-2xl">Greenden</h1>
       <svg
+        id="menuicon"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
         strokeWidth="{1.5}"
         stroke="currentColor"
-        class="w-7 h-7 md:hidden"
+        class="w-7 h-7 md:hidden cursor-pointer"
       >
         <path
           strokeLinecap="round"
@@ -34,20 +35,61 @@
 
       <ul class="flex gap-5 text-gray-600 hidden md:flex">
         <li>
-          <a href="./index.html" class="hover:underline hover:text-black">Home</a>
+          <a href="./index.html" class="hover:underline hover:text-black"
+            >Home</a
+          >
         </li>
         <li>
-          <a href="./product.html" class="hover:underline hover:text-black">Products</a>
+          <a href="./product.html" class="hover:underline hover:text-black"
+            >Products</a
+          >
         </li>
         <li>
-          <a href="./contact.html" class="hover:underline hover:text-black">Contact</a>
+          <a href="./contact.html" class="hover:underline hover:text-black"
+            >Contact</a
+          >
         </li>
       </ul>
     </nav>
+
+    <!-- Sidenav-bar -->
+    <section
+      id="sidenav"
+      class="bg-green-100 fixed z-20 top-0 transition-all duration-1000 text-center"
+      style="width: 30%; height: 100vh; right: -50%"
+    >
+      <div class="text-right p-5">
+        <p
+          id="closenav"
+          class="inline cursor-pointer font-bold"
+          style="font-size: 20px"
+        >
+          x
+        </p>
+      </div>
+      <ul class="flex flex-col gap-10 p-10 text-gray-600">
+        <li>
+          <a href="./index.html" class="hover:underline hover:text-black"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a href="./product.html" class="hover:underline hover:text-black"
+            >Products</a
+          >
+        </li>
+        <li>
+          <a href="./contact.html" class="hover:underline hover:text-black"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </section>
+
     <!-- Header section -->
     <div class="text-center">
       <h1 class="text-3xl font-bold mt-10">Our Product</h1>
-      <input
+      <input id="search"
         type="text"
         placeholder="Search for a Product..."
         class="p-2 mt-8 border border-black"
@@ -56,7 +98,7 @@
     </div>
     <!-- Image Section -->
     <div class="text-center flex justify-center">
-      <div
+      <div id="productcontainer"
         class="grid grid-cols-2 md:grid-cols-4 mt-6 gap-5"
         style="width: 80%"
       >
@@ -139,5 +181,6 @@
         <p>The Standaed chunk of Lorem ipsum used since the 1500s is reprodused below for those interest</p>
         <p>@ 2021 Greenday.com</p>
        </div>
+       <script src="./product.js"></script>
   </body>
 </html>
